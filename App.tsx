@@ -17,7 +17,14 @@ SplashScreen.preventAutoHideAsync();
 
 const App = () => {
   const [fontLoaded] = useFonts({
-    Sora: require("./assets/fonts/sora.ttf"),
+    Sora: require("./assets/fonts/Sora-Regular.ttf"),
+    "Sora-Bold": require("./assets/fonts/Sora-Bold.ttf"),
+    "Sora-ExtraBold": require("./assets/fonts/Sora-ExtraBold.ttf"),
+    "Sora-Light": require("./assets/fonts/Sora-Light.ttf"),
+    "Sora-ExtraLight": require("./assets/fonts/Sora-ExtraLight.ttf"),
+    "Sora-Medium": require("./assets/fonts/Sora-Medium.ttf"),
+    "Sora-SemiBold": require("./assets/fonts/Sora-SemiBold.ttf"),
+    "Sora-Thin": require("./assets/fonts/Sora-Thin.ttf"),
   });
 
   const onLayoutRootView = useCallback(async () => {

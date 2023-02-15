@@ -11,7 +11,7 @@ export default StyleSheet.create({
     fontSize: 11,
     color: "#A0A0A0",
     marginBottom: 5,
-    fontWeight: "500",
+    fontFamily: "Sora-Medium",
   },
   container: {
     width: "100%",

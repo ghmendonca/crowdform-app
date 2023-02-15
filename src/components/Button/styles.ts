@@ -15,5 +15,6 @@ export default StyleSheet.create({
   text: {
     color: "#FFF",
     fontSize: 16,
+    fontFamily: "Sora",
   },
 });

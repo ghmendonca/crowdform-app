@@ -71,6 +71,7 @@ export const theme = {
     },
     fonts: {
       base: "Sora",
+      sora: "Sora",
     },
   },
   color,

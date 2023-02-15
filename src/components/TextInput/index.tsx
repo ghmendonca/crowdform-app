@@ -24,7 +24,7 @@ const TextInput: FunctionComponent<TextInputProps> = ({
         <NativeInput
           {...props}
           style={styles.input}
-          autoCorrect={false}
+          autoCorrect={password ? false : props.autoCorrect}
           textContentType={password ? "password" : props.textContentType}
           autoCapitalize={password ? "none" : "sentences"}
           secureTextEntry={hidden}
