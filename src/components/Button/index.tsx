@@ -4,11 +4,17 @@ import { Text } from "react-native-design-utility";
 import styles from "./styles";
 import { ButtonProps } from "./types";
 
-const Button: FunctionComponent<ButtonProps> = ({ title, ...props }) => {
+const Button: FunctionComponent<ButtonProps> = ({
+  title,
+  disabled,
+  ...props
+}) => {
   return (
     <Pressable
       style={({ pressed }) =>
-        pressed ? [styles.button, styles.buttonPressed] : styles.button
+        pressed && !disabled
+          ? [styles.button, styles.buttonPressed]
+          : styles.button
       }
       {...props}
     >

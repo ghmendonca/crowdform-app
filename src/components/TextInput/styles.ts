@@ -13,6 +13,9 @@ export default StyleSheet.create({
     marginBottom: 5,
     fontFamily: "Sora-Medium",
   },
+  errorLabel: {
+    color: "red",
+  },
   container: {
     width: "100%",
     flexDirection: "row",
