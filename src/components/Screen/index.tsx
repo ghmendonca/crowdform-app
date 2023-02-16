@@ -1,12 +1,27 @@
 import { FunctionComponent } from "react";
-import { Keyboard, SafeAreaView, TouchableWithoutFeedback } from "react-native";
+import {
+  Keyboard,
+  SafeAreaView,
+  ScrollView,
+  TouchableWithoutFeedback,
+} from "react-native";
 import styles from "./styles";
 import { ScreenProps } from "./types";
 
-const Screen: FunctionComponent<ScreenProps> = ({ children }) => {
+const Screen: FunctionComponent<ScreenProps> = ({ children, scroll }) => {
   return (
     <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
-      <SafeAreaView style={styles.screen}>{children}</SafeAreaView>
+      {scroll ? (
+        <ScrollView
+          style={styles.screen}
+          contentInsetAdjustmentBehavior="automatic"
+          contentContainerStyle={{ flexGrow: 1 }}
+        >
+          <SafeAreaView style={styles.screen}>{children}</SafeAreaView>
+        </ScrollView>
+      ) : (
+        <SafeAreaView style={styles.screen}>{children}</SafeAreaView>
+      )}
     </TouchableWithoutFeedback>
   );
 };

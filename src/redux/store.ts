@@ -1,9 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
 import authSlice from "./auth/authSlice";
+import fundSlice from "./fund/fundSlice";
 
 const store = configureStore({
   reducer: {
     auth: authSlice,
+    fund: fundSlice,
   },
 });
 

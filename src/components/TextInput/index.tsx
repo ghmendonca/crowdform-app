@@ -9,7 +9,6 @@ import { Text } from "react-native-design-utility";
 import { Field } from "rc-field-form";
 import styles from "./styles";
 import { TextInputProps } from "./types";
-import { useToggle } from "../../utils/useToggle";
 import { useComponentState } from "./state";
 
 const TextInput: FunctionComponent<TextInputProps> = ({
