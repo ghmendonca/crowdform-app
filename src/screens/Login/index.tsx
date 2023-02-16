@@ -44,7 +44,6 @@ const Login = () => {
               placeholder="Minimum 8 characters"
               password
               field={{
-                shouldUpdate: true,
                 rules: rules.password,
               }}
             />

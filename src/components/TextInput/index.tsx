@@ -1,4 +1,4 @@
-import { FunctionComponent, useState } from "react";
+import { FunctionComponent } from "react";
 import {
   TextInput as NativeInput,
   View,
@@ -10,6 +10,7 @@ import { Field } from "rc-field-form";
 import styles from "./styles";
 import { TextInputProps } from "./types";
 import { useToggle } from "../../utils/useToggle";
+import { useComponentState } from "./state";
 
 const TextInput: FunctionComponent<TextInputProps> = ({
   label,
@@ -19,7 +20,7 @@ const TextInput: FunctionComponent<TextInputProps> = ({
   field,
   ...props
 }) => {
-  const [hidden, toggleHidden] = useToggle(password);
+  const { hidden, toggleHidden } = useComponentState({ password });
 
   return (
     <Field
