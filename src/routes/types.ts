@@ -7,8 +7,16 @@ export type AuthStack = {
 };
 
 export type MainTabs = {
+  HomeStack: undefined;
+  Trade: undefined;
+  Portfolio: undefined;
+};
+
+export type HomeStack = {
   Home: undefined;
+  AssetDetails: undefined;
 };
 
 export type AuthStackProp = NativeStackNavigationProp<AuthStack>;
+export type HomeStackProp = NativeStackNavigationProp<HomeStack>;
 export type MainTabsProp = BottomTabNavigationProp<MainTabs>;

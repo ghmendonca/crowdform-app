@@ -2,7 +2,7 @@ import { useNavigation } from "@react-navigation/native";
 import { useForm } from "rc-field-form";
 import { authenticate } from "../../redux/auth/authSlice";
 import { useAppDispatch } from "../../redux/hooks";
-import { AuthStackProp } from "../../routes/constants";
+import { AuthStackProp } from "../../routes/types";
 import { FormFields } from "./types";
 
 export const useComponentState = () => {

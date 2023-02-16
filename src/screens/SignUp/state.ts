@@ -1,7 +1,7 @@
 import { useNavigation } from "@react-navigation/native";
 import { useForm } from "rc-field-form";
 import Toast from "react-native-toast-message";
-import { AuthStackProp } from "../../routes/constants";
+import { AuthStackProp } from "../../routes/types";
 import { FormFields } from "./types";
 
 export const useComponentState = () => {
