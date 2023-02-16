@@ -1,5 +1,6 @@
-import { PressableProps } from "react-native";
+import { TouchableOpacityProps } from "react-native";
 
-export interface ButtonProps extends PressableProps {
+export interface ButtonProps extends TouchableOpacityProps {
   title: string;
+  variant?: "primary" | "outline" | "success";
 }

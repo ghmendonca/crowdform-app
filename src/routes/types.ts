@@ -1,5 +1,6 @@
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { BottomTabNavigationProp } from "@react-navigation/bottom-tabs";
+import { Fund } from "../types/fund";
 
 export type AuthStack = {
   Login: undefined;
@@ -14,7 +15,10 @@ export type MainTabs = {
 
 export type HomeStack = {
   Home: undefined;
-  AssetDetails: undefined;
+  AssetDetails: {
+    id: number;
+    fund?: Fund;
+  };
 };
 
 export type AuthStackProp = NativeStackNavigationProp<AuthStack>;

@@ -1,14 +1,14 @@
 import { Box } from "react-native-design-utility";
+import { Image } from "react-native";
 import Carousel from "react-native-reanimated-carousel";
 import Screen from "../../components/Screen";
 import Text from "../../components/Text";
 import FundCard from "../../components/FundCard";
-import { useFunds } from "../../redux/fund/hooks";
 import styles from "./styles";
-import { Image } from "react-native";
+import { useComponentState } from "./state";
 
 const Home = () => {
-  const funds = useFunds();
+  const { funds } = useComponentState();
 
   return (
     <Screen scroll>
