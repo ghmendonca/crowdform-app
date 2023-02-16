@@ -18,7 +18,7 @@ const MainRouter = () => {
       <Tabs.Screen
         name="HomeStack"
         component={Home}
-        options={{ header: () => null }}
+        options={{ header: () => null, tabBarLabel: "Home" }}
       />
       <Tabs.Screen name="Trade" component={Trade} />
       <Tabs.Screen name="Portfolio" component={Portfolio} />
