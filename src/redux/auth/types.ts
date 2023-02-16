@@ -9,4 +9,5 @@ export interface AuthState {
 export enum AuthAction {
   CheckFromCache = "auth/checkFromCache",
   Authenticate = "auth/authenticate",
+  Logout = "auth/logout",
 }

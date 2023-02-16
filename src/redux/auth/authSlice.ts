@@ -32,6 +32,10 @@ export const authenticate = createAsyncThunk(
   }
 );
 
+export const logout = createAsyncThunk(AuthAction.Logout, async () => {
+  await AsyncStorage.removeItem("user");
+});
+
 const authSlice = createSlice({
   name: "auth",
   initialState,
@@ -51,6 +55,10 @@ const authSlice = createSlice({
     builder.addCase(authenticate.fulfilled, (state, action) => {
       state.isAuthenticated = true;
       state.user = action.payload;
+    });
+    builder.addCase(logout.fulfilled, (state) => {
+      state.isAuthenticated = false;
+      state.user = null;
     });
   },
 });
